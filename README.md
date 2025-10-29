@@ -45,7 +45,7 @@ As you can see in the screenshot, this output includes a lot of information, whi
 
 ### **Filtering for Specifics**
 
-Since `Get-Process` outputs a lot of data, it’s useful to filter the logs to focus on specific processes. For example, you might want to focus on processes that consume the most CPU. Here's how to filter the output to show only the top 10 processes by CPU usage:
+Since `Get-Process` outputs a lot of data, it’s useful to filter the logs to focus on specific processes. For example, you might want to focus on processes that consume the most CPU! Here's how to filter the output to show only the top 10 processes by CPU usage:
 
 ```powershell
 Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
@@ -53,7 +53,7 @@ Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
 
 <img width="722" height="247" alt="image" src="https://github.com/user-attachments/assets/a04dd8f0-1374-414b-9acc-29e723e350ef" />
 
-You can also filter processes based on other criteria, such as name or memory usage. Here are some examples:
+You can also filter processes based on other criteria, such as name or memory usage! Here's an example:
 
 - To filter for processes using more than 50% CPU:
   ```powershell
