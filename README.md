@@ -59,15 +59,13 @@ You can also filter processes based on other criteria, such as name or memory us
   ```powershell
   Get-Process | Where-Object { $_.CPU -gt 50 }
   ```
-
-<img width="627" height="296" alt="image" src="https://github.com/user-attachments/assets/aa4f8fdb-19e5-4c57-8c7f-9c4e41da3e6b" />
+     <img width="627" height="296" alt="image" src="https://github.com/user-attachments/assets/aa4f8fdb-19e5-4c57-8c7f-9c4e41da3e6b" />
 
 - To find processes with a specific name (e.g., the **best** broswer: `chrome`):
   ```powershell
   Get-Process | Where-Object { $_.Name -eq "chrome" }
   ```
-  
-<img width="565" height="386" alt="image" src="https://github.com/user-attachments/assets/2478318e-fafb-4039-93cf-707a4314dd2f" />
+     <img width="565" height="386" alt="image" src="https://github.com/user-attachments/assets/2478318e-fafb-4039-93cf-707a4314dd2f" />
 
 > Did anyone else notice the **bash code** being used here? This is very similar to how you'd filter processes in Linux by using commands like `ps` and `grep` or `awk`.
 
@@ -85,17 +83,21 @@ For example, we may begin in the **D:** drive and want to switch to the **C:** d
 
 In this sequence:
 1. **`Get-ChildItem`** checks where we currently are:
+   
    <img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
 
   > Before you judge my gaming reputar; I just haven't cleaned out my old files!
 
 2. **`Set-Location C:\`** moves us to the **C:** drive:
-  <img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
+   
+   <img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
   
-3. **`Get-ChildItem`** (again) lists the contents of the **C:** drive to verify the directory change!:
-  <img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
+3. **`Get-ChildItem`** (again) lists the contents of the **C:** drive to verify the directory change:
+   
+   <img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
 
-  > You can think of this as the **Linux `ls` and `cd` commands** (Which you can still use in PowerShell).PowerShell just prefers creating their own different cmdlets (`Get-ChildItem` and `Set-Location`).
+  > You can think of this as the **Linux `ls` and `cd` commands** (Which you can still use in PowerShell).
+  > PowerShell just prefers creating their own different cmdlets (`Get-ChildItem` and `Set-Location`).
 
 Pretty simple right?
 ---
@@ -109,15 +111,14 @@ New-Item -Path "C:\PowerShellLab" -ItemType Directory
 New-Item -Path "C:\PowerShellLab\ServerReport.txt" -ItemType File
 ```
 
+<img width="595" height="331" alt="image" src="https://github.com/user-attachments/assets/f004e056-c7e4-4d09-9da7-1fecc218ca6c" />
+
 **Breakdown of Command:**
 
 | Parameter  | Description                               | Example                  |
 |------------|-------------------------------------------|--------------------------|
 | `-Path`    | Specifies the path where the item is created. | `"C:\PowerShellLab"`      |
 | `-ItemType` | Specifies the type of item to create.    | `Directory`, `File`, `SymbolicLink` |
-
-[Insert Image Here: `S2.2.png`]  
-[Insert Image Here: `baf71df1-f7e3-4581-b6be-7e40944e6e50.png`]  
 
 ---
 
