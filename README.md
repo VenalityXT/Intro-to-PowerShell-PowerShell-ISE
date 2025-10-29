@@ -76,7 +76,6 @@ You can also filter processes based on other criteria, such as name or memory us
 ## **Step 2: Navigate Directories**
 
 To navigate the file system in PowerShell, we start by listing the contents of the current directory using `Get-ChildItem`. This is similar to `ls` in Linux. If we want to change directories, we use `Set-Location`, which is also like `cd` in Linux.
-> Both of these alternate commands do work in Window's Powershell!
 
 For example, we may begin in the **D:** drive and want to switch to the **C:** drive:
 
@@ -86,21 +85,17 @@ For example, we may begin in the **D:** drive and want to switch to the **C:** d
 
 In this sequence:
 1. **`Get-ChildItem`** checks where we currently are:
- <p style="text-indent: 40px;">
    <img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
-</p>
 
   > Before you judge my gaming reputar; I just haven't cleaned out my old files!
 
 2. **`Set-Location C:\`** moves us to the **C:** drive:
-<p style="text-indent: 80px;">
   <img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
-  </p> 
-3. **`Get-ChildItem`** lists the contents of the **C:** drive to verify the change:
-<p style="text-indent: 40px;">
+  
+3. **`Get-ChildItem`** (again) lists the contents of the **C:** drive to verify the directory change!:
   <img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
-</p> 
-  > You can think of this as the **Linux `ls` and `cd` commands**, where you check the contents of a directory and move around the filesystem. PowerShell just uses different cmdlets (`Get-ChildItem` and `Set-Location`).
+
+  > You can think of this as the **Linux `ls` and `cd` commands** (Which you can still use in PowerShell).PowerShell just prefers creating their own different cmdlets (`Get-ChildItem` and `Set-Location`).
 
 Pretty simple right?
 ---
