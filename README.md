@@ -85,21 +85,21 @@ For example, we may begin in the **D:** drive and want to switch to the **C:** d
 - `Get-ChildItem`     # List contents of the C:\ drive
 
 In this sequence:
-1. **`Get-ChildItem`** checks where we currently are (D: drive).
+1. **`Get-ChildItem`** checks where we currently are:
  
-<img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
+  <img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
 
-> Before you judge my gaming reputar; I just haven't cleaned out my old files!
+  > Before you judge my gaming reputar; I just haven't cleaned out my old files!
 
-3. **`Set-Location C:\`** moves us to the **C:** drive.
+3. **`Set-Location C:\`** moves us to the **C:** drive:
 
-<img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
+  <img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
    
-5. **`Get-ChildItem`** lists the contents of the **C:** drive to verify the change.
+5. **`Get-ChildItem`** lists the contents of the **C:** drive to verify the change:
 
-<img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
+  <img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
 
-> You can think of this as the **Linux `ls` and `cd` commands**, where you check the contents of a directory and move around the filesystem. PowerShell just uses different cmdlets (`Get-ChildItem` and `Set-Location`).
+  > You can think of this as the **Linux `ls` and `cd` commands**, where you check the contents of a directory and move around the filesystem. PowerShell just uses different cmdlets (`Get-ChildItem` and `Set-Location`).
 
 Pretty simple right?
 ---
