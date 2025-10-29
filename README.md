@@ -47,23 +47,23 @@ As you can see in the screenshot, this output includes a lot of information, whi
 
 Since `Get-Process` outputs a lot of data, it’s useful to filter the logs to focus on specific processes. For example, you might want to focus on processes that consume the most CPU. Here's how to filter the output to show only the top 10 processes by CPU usage:
 
-X
+```powershell
 Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
-X
+```
 
 [Insert Image Here: `getprocess2.png`]
 
 You can also filter processes based on other criteria, such as name or memory usage. Here are some examples:
 
 - To filter for processes using more than 50% CPU:
-  X
+  ```powershell
   Get-Process | Where-Object { $_.CPU -gt 50 }
-  X
+  ```
 
 - To find processes with a specific name (e.g., `chrome`):
-  X
+  ```powershell
   Get-Process | Where-Object { $_.Name -eq "chrome" }
-  X
+  ```
 
 > Recognize the familiar **bash code** being used here? This is very similar to how you'd filter processes in Linux, using commands like `ps` and `grep` or `awk`.
 
@@ -75,41 +75,36 @@ To navigate the file system in PowerShell, we start by listing the contents of t
 
 For example, we may begin in the **D:** drive and want to switch to the **C:** drive:
 
-X
-Get-ChildItem  # Check current directory (in D:)
-X
-
-X
-Set-Location C:\  # Change to C: drive
-X
-
-X
-Get-ChildItem  # List contents of C: drive
-X
+- Get-ChildItem  # Check current directory (in D:\)
+- Set-Location C:\  # Change to C:\ drive
+- Get-ChildItem  # List contents of C:\ drive
 
 In this sequence:
 1. **`Get-ChildItem`** checks where we currently are (D: drive).
-2. **`Set-Location C:\`** moves us to the **C:** drive.
-3. **`Get-ChildItem`** lists the contents of the **C:** drive to verify the change.
+ 
+<img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
+> ""Before you judge my gaming reputar; I just haven't cleaned out my old files!
 
+3. **`Set-Location C:\`** moves us to the **C:** drive.
+
+<img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
+   
+5. **`Get-ChildItem`** lists the contents of the **C:** drive to verify the change.
+
+<img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
 > You can think of this as the **Linux `ls` and `cd` commands**, where you check the contents of a directory and move around the filesystem. PowerShell just uses different cmdlets (`Get-ChildItem` and `Set-Location`).
 
-[Insert Image Here: `S2.png`]  
-[Insert Image Here: `S2.1.png`]  
-
+Pretty simple right?
 ---
 
 ## **Step 3: Create Files and Directories**
 
 The `New-Item` cmdlet allows you to create both files and directories. For example:
 
-X
+```powershell
 New-Item -Path "C:\PowerShellLab" -ItemType Directory
-X
-
-X
 New-Item -Path "C:\PowerShellLab\ServerReport.txt" -ItemType File
-X
+```
 
 **Breakdown of Command:**
 
@@ -128,21 +123,19 @@ X
 The `Get-FileHash` cmdlet computes a cryptographic hash (SHA256 by default) for a given file. A hash serves as a **digital fingerprint** — even a single change will result in a different hash value.
 
 To check the hash of a file:
-X
+```powershell
 Get-FileHash -Path "ServerReport.txt"
-X
+```
+
+<img width="976" height="107" alt="image" src="https://github.com/user-attachments/assets/c0f945ab-12e9-414e-8ade-ef202de87374" />
 
 After appending content to the file:
-
-X
+```powershell
 Add-Content -Path "ServerReport.txt" -Value "CPU and Memory check: Normal"
-X
-X
 Get-FileHash -Path "ServerReport.txt"
-X
+``` 
 
-[Insert Image Here: `eb949b9d-e420-458c-a48c-9e08a0023416.png`]  
-[Insert Image Here: `S3.2.png`]  
+<img width="974" height="117" alt="image" src="https://github.com/user-attachments/assets/349c2524-cb09-4e0c-8e4a-5deaf53c1e92" />
 
 **Explanation:**
 
