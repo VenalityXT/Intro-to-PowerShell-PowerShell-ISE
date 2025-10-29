@@ -28,7 +28,7 @@ The script automates the process of monitoring system health, managing file stru
 
 The `Get-Process` cmdlet retrieves a list of all running processes on your system. It outputs data in several columns, such as **NPM**, **PM**, **WS**, **CPU**, **ID**, and **SI**, which might be unfamiliar to many. Here’s a screenshot of the output for reference:
 
-[Insert Image Here: `getprocess.png`]
+<img width="710" height="1008" alt="image" src="https://github.com/user-attachments/assets/6b3802de-6b61-4a44-8666-c8ce45f0e80f" />
 
 ### **Explanation of Columns**:
 
@@ -51,7 +51,7 @@ Since `Get-Process` outputs a lot of data, it’s useful to filter the logs to f
 Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
 ```
 
-[Insert Image Here: `getprocess2.png`]
+<img width="722" height="247" alt="image" src="https://github.com/user-attachments/assets/a04dd8f0-1374-414b-9acc-29e723e350ef" />
 
 You can also filter processes based on other criteria, such as name or memory usage. Here are some examples:
 
@@ -60,10 +60,14 @@ You can also filter processes based on other criteria, such as name or memory us
   Get-Process | Where-Object { $_.CPU -gt 50 }
   ```
 
+<img width="627" height="296" alt="image" src="https://github.com/user-attachments/assets/aa4f8fdb-19e5-4c57-8c7f-9c4e41da3e6b" />
+
 - To find processes with a specific name (e.g., `chrome`):
   ```powershell
   Get-Process | Where-Object { $_.Name -eq "chrome" }
   ```
+  
+<img width="565" height="386" alt="image" src="https://github.com/user-attachments/assets/2478318e-fafb-4039-93cf-707a4314dd2f" />
 
 > Recognize the familiar **bash code** being used here? This is very similar to how you'd filter processes in Linux, using commands like `ps` and `grep` or `awk`.
 
