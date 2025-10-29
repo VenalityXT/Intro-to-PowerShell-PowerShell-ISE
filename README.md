@@ -62,11 +62,11 @@ You can also filter processes based on other criteria, such as name or memory us
 
 <img width="627" height="296" alt="image" src="https://github.com/user-attachments/assets/aa4f8fdb-19e5-4c57-8c7f-9c4e41da3e6b" />
 
-- To find processes with a specific name (e.g., `chrome`):
+- To find processes with a specific name (e.g., the best broswer: `chrome`):
   ```powershell
   Get-Process | Where-Object { $_.Name -eq "chrome" }
   ```
-  > Yes, chrome is still the best broswer, unfortunately...
+  
 <img width="565" height="386" alt="image" src="https://github.com/user-attachments/assets/2478318e-fafb-4039-93cf-707a4314dd2f" />
 
 > Recognize the familiar **bash code** being used here? This is very similar to how you'd filter processes in Linux, using commands like `ps` and `grep` or `awk`.
