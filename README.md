@@ -62,7 +62,7 @@ You can also filter processes based on other criteria, such as name or memory us
 
 <img width="627" height="296" alt="image" src="https://github.com/user-attachments/assets/aa4f8fdb-19e5-4c57-8c7f-9c4e41da3e6b" />
 
-- To find processes with a specific name (e.g., the best broswer: `chrome`):
+- To find processes with a specific name (e.g., the **best** broswer: `chrome`):
   ```powershell
   Get-Process | Where-Object { $_.Name -eq "chrome" }
   ```
