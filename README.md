@@ -80,9 +80,9 @@ To navigate the file system in PowerShell, we start by listing the contents of t
 
 For example, we may begin in the **D:** drive and want to switch to the **C:** drive:
 
-- `Get-ChildItem`     # Check current directory (in D:\)
-- `Set-Location C:\`  # Change to C:\ drive
-- `Get-ChildItem`     # List contents of C:\ drive
+- `Get-ChildItem`     # Check current directory
+- `Set-Location C:\`  # Change to the C:\ drive
+- `Get-ChildItem`     # List contents of the C:\ drive
 
 In this sequence:
 1. **`Get-ChildItem`** checks where we currently are (D: drive).
