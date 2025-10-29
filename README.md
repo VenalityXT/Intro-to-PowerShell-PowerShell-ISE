@@ -89,10 +89,11 @@ In this sequence:
  <p style="text-indent: 40px;">
    <img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
 </p>
+
   > Before you judge my gaming reputar; I just haven't cleaned out my old files!
 
 2. **`Set-Location C:\`** moves us to the **C:** drive:
-<p style="text-indent: 40px;">
+<p style="text-indent: 80px;">
   <img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
   </p> 
 3. **`Get-ChildItem`** lists the contents of the **C:** drive to verify the change:
