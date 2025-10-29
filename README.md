@@ -69,19 +69,20 @@ You can also filter processes based on other criteria, such as name or memory us
   
 <img width="565" height="386" alt="image" src="https://github.com/user-attachments/assets/2478318e-fafb-4039-93cf-707a4314dd2f" />
 
-> Recognize the familiar **bash code** being used here? This is very similar to how you'd filter processes in Linux, using commands like `ps` and `grep` or `awk`.
+> Did anyone else notice the **bash code** being used here? This is very similar to how you'd filter processes in Linux by using commands like `ps` and `grep` or `awk`.
 
 ---
 
 ## **Step 2: Navigate Directories**
 
-To navigate the file system in PowerShell, we start by listing the contents of the current directory using `Get-ChildItem`. This is similar to `ls` in Linux. If we want to change directories, we use `Set-Location`, which is like `cd` in Linux.
+To navigate the file system in PowerShell, we start by listing the contents of the current directory using `Get-ChildItem`. This is similar to `ls` in Linux. If we want to change directories, we use `Set-Location`, which is also like `cd` in Linux.
+> Both of these alternate commands do work in Window's Powershell!
 
 For example, we may begin in the **D:** drive and want to switch to the **C:** drive:
 
-- Get-ChildItem  # Check current directory (in D:\)
-- Set-Location C:\  # Change to C:\ drive
-- Get-ChildItem  # List contents of C:\ drive
+- `Get-ChildItem`     # Check current directory (in D:\)
+- `Set-Location C:\`  # Change to C:\ drive
+- `Get-ChildItem`     # List contents of C:\ drive
 
 In this sequence:
 1. **`Get-ChildItem`** checks where we currently are (D: drive).
