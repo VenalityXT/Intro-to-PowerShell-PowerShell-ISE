@@ -104,36 +104,47 @@ Pretty simple right?
 
 ## **Step 3: Create Files and Directories**
 
-The `New-Item` cmdlet allows you to create both files and directories. For example:
+In PowerShell, the `New-Item` cmdlet is used to create both files and directories. Below is an example of how to create a directory and a file:
 
 ```powershell
 New-Item -Path "C:\PowerShellLab" -ItemType Directory
 New-Item -Path "C:\PowerShellLab\ServerReport.txt" -ItemType File
 ```
 
+The first command creates a directory called `PowerShellLab`, and the second command creates an empty file `ServerReport.txt` inside it.
+
 <img width="595" height="331" alt="image" src="https://github.com/user-attachments/assets/f004e056-c7e4-4d09-9da7-1fecc218ca6c" />
 
-Now that we've created the directory and the file we'll be using, we can add text to it by using `Add-Content` and read the data with :
+After creating the file, you can add content to it using the `Add-Content` cmdlet:
+
 ```powershell
-Add-Content -Path "ServerReport.txt" -Value "System Health Report - Initial Scan Complete."
+Add-Content -Path "C:\PowerShellLab\ServerReport.txt" -Value "System Health Report - Initial Scan Complete."
 ```
 
-And we can read it with `Get-Content`:
+This command appends the text `"System Health Report - Initial Scan Complete."` to the file `ServerReport.txt`.
+
+Next, you can read the contents of the file using `Get-Content`:
+```powershell
+Get-Content -Path "C:\PowerShellLab\ServerReport.txt"
+```
+
+This will output the content of the file to the console.
 
 <img width="422" height="63" alt="image" src="https://github.com/user-attachments/assets/01d0d3f9-d147-4177-9b53-bf80992bead6" />
 
-**Breakdown of Command:**
+### **Breakdown of Commands**
 
-| Parameter  | Description                               | Example                  |
-|------------|-------------------------------------------|--------------------------|
-| `-Path`    | Specifies the path where the item is created. | `"C:\PowerShellLab"`      |
-| `-ItemType` | Specifies the type of item to create.    | `Directory`, `File`, `SymbolicLink` |
+| Parameter   | Description                                                       | Example                                      |
+|-------------|-------------------------------------------------------------------|----------------------------------------------|
+| `-Path`     | Specifies the path where the item is created or accessed.         | `"C:\PowerShellLab\ServerReport.txt"`        |
+| `-ItemType` | Specifies the type of item to create. Valid values include `Directory`, `File`, and `SymbolicLink`. | `Directory`, `File` |
+| `-Value`    | Specifies the content to be added to a file. Used with `Add-Content`. | `"System Health Report - Initial Scan Complete."` |
 
 ---
 
 ## **Step 4: File Integrity Validation with `Get-FileHash`**
 
-The `Get-FileHash` cmdlet computes a cryptographic hash (SHA256 by default) for a given file. A hash serves as a **digital fingerprint** — even a single change will result in a different hash value.
+The `Get-FileHash` cmdlet computes a cryptographic hash (SHA256 by default) for a given file. A hash serves as a **digital fingerprint**! Even a single change will result in a different hash value.
 
 To check the hash of a file:
 ```powershell
