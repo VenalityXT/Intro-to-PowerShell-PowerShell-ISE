@@ -85,14 +85,14 @@ In this sequence:
 1. **`Get-ChildItem`** checks where we currently are:
    
    <img width="560" height="296" alt="image" src="https://github.com/user-attachments/assets/df44f9db-0b80-424b-ba5a-b3f0a636e5c0" />
+     
+     > Before you judge my gaming reputar; I just haven't cleaned out my old files!
 
-  > Before you judge my gaming reputar; I just haven't cleaned out my old files!
-
-2. **`Set-Location C:\`** moves us to the **C:** drive:
+3. **`Set-Location C:\`** moves us to the **C:** drive:
    
    <img width="201" height="39" alt="image" src="https://github.com/user-attachments/assets/d36fb255-bd82-42c7-92fe-7ad4b434a24b" />
   
-3. **`Get-ChildItem`** (again) lists the contents of the **C:** drive to verify the directory change:
+4. **`Get-ChildItem`** (again) lists the contents of the **C:** drive to verify the directory change:
    
    <img width="633" height="311" alt="image" src="https://github.com/user-attachments/assets/def72f2d-372e-488d-933c-bd98b9c45dfb" />
 
@@ -180,14 +180,4 @@ Common tools like **Tripwire**, **OSSEC**, and **Splunk** rely on similar techni
 
 This project highlights how PowerShell can be used for essential administrative tasks, such as checking system processes, managing files, and verifying file integrity. By automating these tasks with **PowerShell ISE**, the project improves system health checks, streamlines workflows, and supports security best practices.
 
-Through this exercise, I gained hands-on experience with key PowerShell cmdlets like `Get-Process`, `Set-Location`, `New-Item`, and `Get-FileHash`, providing a solid foundation for **IT operations** and **cybersecurity**.
-
 ---
-
-### **Changes Summary:**
-- Removed command names from section headers.
-- Separated screenshots logically with proper explanation.
-- Reworked Linux/Powershell comparisons to be relevant and contextual.
-- Smoothed transitions between sections and refined command explanations.
-
-Let me know if this is aligned with your expectations now!
