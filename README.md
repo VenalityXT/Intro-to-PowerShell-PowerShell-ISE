@@ -17,7 +17,7 @@ The script automates the process of monitoring system health, managing file stru
 
 ## **Objectives**
 
-1. Monitor system processes and analyze their output.  
+1. Monitor system processes and analyze their output.
 2. Navigate directories and manage files with PowerShell cmdlets (`Get-ChildItem`, `Set-Location`, `New-Item`, `Add-Content`, `Get-Content`).  
 3. Ensure file integrity with `Get-FileHash` to verify data integrity.  
 4. Gain practical experience with PowerShell ISE for scripting, debugging, and automation.
@@ -117,8 +117,6 @@ Now that we've created the directory and the file we'll be using, we can add tex
 ```powershell
 Add-Content -Path "ServerReport.txt" -Value "System Health Report - Initial Scan Complete."
 ```
-
-<img width="895" height="29" alt="image" src="https://github.com/user-attachments/assets/b6d0249b-f922-484a-812a-60722be7bcbf" />
 
 And we can read it with `Get-Content`:
 
