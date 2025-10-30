@@ -113,6 +113,17 @@ New-Item -Path "C:\PowerShellLab\ServerReport.txt" -ItemType File
 
 <img width="595" height="331" alt="image" src="https://github.com/user-attachments/assets/f004e056-c7e4-4d09-9da7-1fecc218ca6c" />
 
+Now that we've created the directory and the file we'll be using, we can add text to it by using `Add-Content` and read the data with :
+```powershell
+Add-Content -Path "ServerReport.txt" -Value "System Health Report - Initial Scan Complete."
+```
+
+<img width="895" height="29" alt="image" src="https://github.com/user-attachments/assets/b6d0249b-f922-484a-812a-60722be7bcbf" />
+
+And we can read it with `Get-Content`:
+
+<img width="422" height="63" alt="image" src="https://github.com/user-attachments/assets/01d0d3f9-d147-4177-9b53-bf80992bead6" />
+
 **Breakdown of Command:**
 
 | Parameter  | Description                               | Example                  |
