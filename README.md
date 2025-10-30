@@ -97,6 +97,7 @@ In this sequence:
   > PowerShell just prefers creating their own different cmdlets (`Get-ChildItem` and `Set-Location`).
 
 Pretty simple right?
+
 ---
 
 ## **Step 3: Create Files and Directories**
