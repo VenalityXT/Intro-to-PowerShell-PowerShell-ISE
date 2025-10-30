@@ -142,7 +142,7 @@ To check the hash of a file:
 Get-FileHash -Path "ServerReport.txt"
 ```
 
-<img width="976" height="107" alt="image" src="https://github.com/user-attachments/assets/c0f945ab-12e9-414e-8ade-ef202de87374" />
+<img width="898" height="18" alt="image" src="https://github.com/user-attachments/assets/6a197bb0-4f99-4d39-b8bc-0d6257f22176" />
 
 After appending content to the file:
 ```powershell
